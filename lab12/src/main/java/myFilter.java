@@ -23,7 +23,7 @@ public class myFilter implements Filter {
 
           if((session.getAttribute("username") == null) && (session.getAttribute("password") == null)) {
               // && (req.getRequestURI().endsWith("/*")))
-              System.out.println("forwarding to login");
+              System.out.println(" New user ,forwarding to login..looooooooooove");
               req.getRequestDispatcher("login").forward(servletRequest, servletResponse);
 
 
@@ -31,7 +31,7 @@ public class myFilter implements Filter {
       else {
 
               filterChain.doFilter(servletRequest, servletResponse);
-              System.out.println("filter forward");
+              System.out.println(" old User,filter forward");
               //out.print("filter is invoked after");
           }
     }

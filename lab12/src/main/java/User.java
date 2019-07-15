@@ -15,7 +15,7 @@ public class User extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
-        System.out.println("tekkkkkkkkkkkkkk");
+        System.out.println("de Get login servlet");
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
         out.print("<html><head><title>Test</title></head><body>");
@@ -37,9 +37,10 @@ public class User extends HttpServlet {
         session.setAttribute(("password"),(req.getParameter("password")));
 //        System.out.println("userName is" + session.getAttribute("username"));
 //        System.out.println("userName is from param" + req.getParameter("name"));
-        System.out.println("password is from param" + req.getParameter("password"));
+      //  System.out.println("password is from param" + req.getParameter("password"));
+        System.out.println("do Post login servlet");
         RequestDispatcher dispatcher = req.getRequestDispatcher("welcome");
-        System.out.println(req.getMethod());
+      // System.out.println(req.getMethod());
         dispatcher.forward(req,resp);
     }
 }

@@ -13,7 +13,7 @@ public class Welcome extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         PrintWriter out = resp.getWriter();
-        out.print("welcome to our company");
+        out.print("welcome to our company Teklemariam");
     }
 
     @Override
@@ -23,7 +23,7 @@ public class Welcome extends HttpServlet {
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
         out.print("<html><head><title>Test</title></head><body>");
-        out.print("<form method='Get' action='login' >");
+        out.print("<form method='Get' action='logout' >");
         out.print("welcome to our company");
         out.print(" <input type='submit'  value='logout'> ");
         out.print("</form>");
